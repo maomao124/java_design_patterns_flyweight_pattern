@@ -86,7 +86,7 @@ public class BoxFactory
      * @param key the key
      * @return the abstract box
      */
-    public AbstractBox IBox(String key)
+    private AbstractBox IBox(String key)
     {
         AbstractBox abstractBox = map.get(key);
         if (abstractBox == null)
@@ -104,7 +104,7 @@ public class BoxFactory
      * @param key the key
      * @return the abstract box
      */
-    public AbstractBox LBox(String key)
+    private AbstractBox LBox(String key)
     {
         AbstractBox abstractBox = map.get(key);
         if (abstractBox == null)
@@ -122,13 +122,13 @@ public class BoxFactory
      * @param key the key
      * @return the abstract box
      */
-    public AbstractBox OBox(String key)
+    private AbstractBox OBox(String key)
     {
         AbstractBox abstractBox = map.get(key);
         if (abstractBox == null)
         {
             OBox oBox = new OBox();
-            map.put("L", oBox);
+            map.put("O", oBox);
             return oBox;
         }
         return abstractBox;
